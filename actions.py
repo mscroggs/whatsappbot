@@ -1,5 +1,6 @@
 from __future__ import division
 from datetime import datetime
+from random import choice
 
 def ping(message):
     return "Pong!"
@@ -15,7 +16,12 @@ def date(message):
     return datetime.now().strftime("%Y-%m-%d %H:%M GMT")
 
 def help(message):
-    return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?ping, ?date, ?emf"
+    return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?"+choice(actiondict)+", ?"+choice(actiondict)+" or ?"+choice(actiondict)+""
+
+def month(message):
+    if datetime.now().month == 5:
+        return "'Tis the month of Maying!"
+    return "'Tis not the month of Maying!"
 
 actiondict = {
     "github":github,
@@ -23,5 +29,6 @@ actiondict = {
     "ping":ping,
     "emf":emf,
     "help":help,
-    "date":date
+    "date":date,
+    "month":month
    }
