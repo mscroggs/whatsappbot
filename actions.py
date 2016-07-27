@@ -4,6 +4,9 @@ from datetime import datetime
 def ping(message):
     return "Pong!"
 
+def github(message):
+    return "You can find my source code at https://github.com/mscroggs/whatsappbot"
+
 def emf(message):
     delta = datetime(2016,8,5,11) - datetime.now()
     return str(delta.days)+" days, "+str(delta.seconds//3600)+" hours until EMF2016"
@@ -15,6 +18,8 @@ def help(message):
     return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?ping, ?date, ?emf"
 
 actiondict = {
+    "github":github,
+    "git":github,
     "ping":ping,
     "emf":emf,
     "help":help,
