@@ -31,7 +31,7 @@ class EchoLayer(YowInterfaceLayer):
                     try:
                         self.send(messageProtocolEntity.getFrom(False),f(mess[1:]))
                     except:
-                        self.send(messageProtocolEntity.getFrom(False),"An error occurred when I tried to answer you. Sorry!"))
+                        self.send(messageProtocolEntity.getFrom(False),"An error occurred when I tried to answer you. Sorry!")
                     break
             else:
                 self.send(messageProtocolEntity.getFrom(False),"I didn't understand your command. Sorry!")
