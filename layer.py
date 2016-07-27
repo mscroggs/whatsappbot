@@ -28,7 +28,10 @@ class EchoLayer(YowInterfaceLayer):
         if len(mess) > 0 and mess[0] == "?":
             for m,f in actiondict.items():
                 if mess[1:].split()[0].lower() == m:
-                    self.send(messageProtocolEntity.getFrom(False),f(mess[1:]))
+                    try:
+                        self.send(messageProtocolEntity.getFrom(False),f(mess[1:]))
+                    except:
+                        self.send(messageProtocolEntity.getFrom(False),"An error occurred when I tried to answer you. Sorry!"))
                     break
             else:
                 self.send(messageProtocolEntity.getFrom(False),"I didn't understand your command. Sorry!")
