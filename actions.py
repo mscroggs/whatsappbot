@@ -16,7 +16,7 @@ def date(message):
     return datetime.now().strftime("%Y-%m-%d %H:%M GMT")
 
 def help(message):
-    return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?"+choice(actiondict)+", ?"+choice(actiondict)+" or ?"+choice(actiondict)+""
+    return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?"+choice(actiondict.keys())+", ?"+choice(actiondict.keys())+" or ?"+choice(actiondict.keys())+""
 
 def month(message):
     if datetime.now().month == 5:
