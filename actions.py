@@ -15,7 +15,7 @@ def emf(message):
 def date(message):
     return datetime.now().strftime("%Y-%m-%d %H:%M GMT")
 
-def help(message):
+def help_(message):
     return "Hi, I'm ScroggsBot. Send me commands starting with a ?. Try: ?"+choice(actiondict.keys())+", ?"+choice(actiondict.keys())+" or ?"+choice(actiondict.keys())+""
 
 def month(message):
@@ -28,7 +28,7 @@ actiondict = {
     "git":github,
     "ping":ping,
     "emf":emf,
-    "help":help,
+    "help":help_,
     "date":date,
     "month":month
    }
